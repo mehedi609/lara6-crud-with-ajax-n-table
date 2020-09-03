@@ -44,9 +44,9 @@
                     <td colspan=4 class="text-danger"><span style="margin-left: 50%">No Data Found</span></td>
                   </tr>
               @endif
-              @foreach($products as $product)
+              @foreach($products as $key => $product)
                 <tr id="product_id_{{ $product->id }}">
-                  <td>{{ $product->id  }}</td>
+                  <td>{{ $key + 1  }}</td>
                   <td>{{ $product->name }}</td>
                   <td>{{ $product->price }}</td>
                   <td colspan="2">
